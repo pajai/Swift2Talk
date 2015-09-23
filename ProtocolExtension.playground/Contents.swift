@@ -5,7 +5,7 @@ import UIKit
 
 // Swift 101 re protocol & class
 
-// - protocol: like an interface in Java or a trait in Scala
+// - protocol: like an interface in Java
 
 // - class:  a reference type, which can extend a protocol
 // - struct: a value type, which can also extend a protocol
@@ -73,7 +73,6 @@ let strings = ["hello", "world"]
 
 // not allowed, sum() is only defined for collections of Int
 //strings.sum()
-
 
 
 extension CollectionType where Generator.Element: Comparable {

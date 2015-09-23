@@ -63,9 +63,15 @@ var p3 = Person(age: 22, name: "helen")
 
 func ageMustDouble(var p: Person) {
     p.age = p.age * 2
-    p
 }
 
 ageMustDouble(p1)
 p1
+
+
+
+// Same behavior with Person than with Int, Double, etc.
+
+// In Swift: Array, Dictionary, Set are value types
+
 

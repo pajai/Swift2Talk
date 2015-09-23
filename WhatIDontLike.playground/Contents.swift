@@ -4,16 +4,16 @@ import UIKit
 
 let str = "hello world"
 
-str[str.startIndex...advance(str.startIndex, 4)]
-str[advance(str.startIndex, 6)..<str.endIndex]
+str[str.startIndex...str.startIndex.advancedBy(4)]
+str[str.startIndex.advancedBy(6)..<str.endIndex]
 
 extension String {
     
     subscript(range: Range<Int>) -> String {
         let startIndex = range.startIndex
         let endIndex = range.endIndex - 1
-        let start = startIndex < 0 ? advance(self.endIndex, startIndex) : advance(self.startIndex, startIndex)
-        let end   = endIndex < 0   ? advance(self.endIndex, endIndex)   : advance(self.startIndex, endIndex)
+        let start = startIndex < 0 ? self.endIndex.advancedBy(startIndex) : self.startIndex.advancedBy(startIndex)
+        let end   = endIndex < 0   ? self.endIndex.advancedBy(endIndex)   : self.startIndex.advancedBy(endIndex)
         let newRange = (start)...(end)
         return self.substringWithRange(newRange)
     }
@@ -26,15 +26,12 @@ extension String {
 
 
 let str2 = "foobar"
-//str2.substringWithRange(advance(str2.startIndex,1)...advance(str2.startIndex, 4))
+str2.substringWithRange(str2.startIndex.advancedBy(1)...str2.startIndex.advancedBy(4))
 
 "hello world"[0...4]
 "hello world"[6...10]
 "hello world"[(-5)...(-1)]
-//"hello world"[((-1)...1)]
 
-"abc"
-((-1)...1)
 
 
 ((-1)...(0))

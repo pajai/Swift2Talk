@@ -3,8 +3,7 @@
 import UIKit
 
 
-
-/* for with pattern matching */
+// Extension of pattern matching in Swift 2
 
 
 enum MyType {
@@ -16,10 +15,9 @@ enum MyType {
 let a = MyType.Nb(5)
 
 
-// extract value
-// - pattern matching switch
-// - pattern matching if case
 
+
+// extension for 'if' statement
 
 if case MyType.Nb(let v) = a {
     print(v)
@@ -30,18 +28,22 @@ if case let MyType.Nb(v) = a {
 }
 
 
-let b = MyType.Str("hello")
-
+// extension for 'for' statement
 
 let coll: [MyType] = [.Nb(1), .Nb(2), .Str("john"), .Unknown]
+
+
+for myType in coll {
+    print(myType)
+}
 
 
 for case let MyType.Str(s) in coll {
     print(s)
 }
 
-
 // will print out only "john"
+
 
 
 /* if with pattern matching */
