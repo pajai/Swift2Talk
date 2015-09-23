@@ -31,8 +31,19 @@ let set = Set([1,2,3])
 // the global map function works on a Set
 map(set) { $0 + 1 }
 
+// syntax is not consistent accross collections
+// some had 'map', 'filter', etc. methods,
+// some others had globally defined functions
+
+
 
 // Swift 2
+
+// thanks to protocol extensions, everything becomes
+// easier
+
+// map & filter are functions defined on the collection protocol
+// apply automatically to all sub classes
 
 let a2: [Int] = [1,2,3]
 let b2 = a2.map{ $0 + 1 }
