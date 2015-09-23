@@ -13,10 +13,33 @@ enum MyType {
     case Unknown
 }
 
+let a = MyType.Nb(5)
+
+
+// extract value
+// - pattern matching switch
+// - pattern matching if case
+
+
+if case MyType.Nb(let v) = a {
+    print(v)
+}
+
+if case let MyType.Nb(v) = a {
+    print(v)
+}
+
+
+let b = MyType.Str("hello")
+
+
 let coll: [MyType] = [.Nb(1), .Nb(2), .Str("john"), .Unknown]
+
+
 for case let MyType.Str(s) in coll {
     print(s)
 }
+
 
 // will print out only "john"
 

@@ -40,6 +40,7 @@ let f = Foo()
 print(f.someMethod())
 print(f.anotherMethod())
 
+
 // first protocol defined: we define a method someMethod() without implementation
 
 // a class Foo extends the protocol

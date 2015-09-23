@@ -42,7 +42,6 @@
 		2E82EC541B386892009CD5C0 /* Swift2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift2-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E82EC551B386893009CD5C0 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
 		2E82EC561B386893009CD5C0 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
-		2E82EC581B395A61009CD5C0 /* Swift2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Swift2.playground; sourceTree = "<group>"; };
 		2E82EC591B395A61009CD5C0 /* ValueTypePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ValueTypePlayground.playground; sourceTree = "<group>"; };
 		2E82EC5E1B3993E7009CD5C0 /* Swift2 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift2 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E82EC621B3993E7009CD5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		2E82EC6B1B39A133009CD5C0 /* ObjCWithGenerics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCWithGenerics.h; sourceTree = "<group>"; };
 		2E82EC6C1B39A133009CD5C0 /* ObjCWithGenerics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCWithGenerics.m; sourceTree = "<group>"; };
 		2EE85BBB1B3ADB29004C65F4 /* WhatIDontLike.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WhatIDontLike.playground; sourceTree = "<group>"; };
+		43EA4F8C1BB1DD89003BC2EF /* Draft.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Draft.playground; sourceTree = "<group>"; };
 		43F2F2F11BAC3A96004187D8 /* ErrorHandling.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorHandling.playground; sourceTree = "<group>"; };
 		43F2F2F21BAC4913004187D8 /* EarlyExitWithGuard.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EarlyExitWithGuard.playground; sourceTree = "<group>"; };
 		43F2F2F31BAC4DD7004187D8 /* ProtocolExtension.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ProtocolExtension.playground; sourceTree = "<group>"; };
@@ -79,6 +79,7 @@
 		2E82EC361B38686A009CD5C0 = {
 			isa = PBXGroup;
 			children = (
+				43EA4F8C1BB1DD89003BC2EF /* Draft.playground */,
 				43F2F2F51BAC6D10004187D8 /* PatternMatching.playground */,
 				43F2F2F41BAC59C1004187D8 /* MapFilterAndCo.playground */,
 				43F2F2F31BAC4DD7004187D8 /* ProtocolExtension.playground */,
@@ -86,7 +87,6 @@
 				43F2F2F11BAC3A96004187D8 /* ErrorHandling.playground */,
 				2E53BF601B3B001F0011F8F3 /* Algebraic_Datatype.playground */,
 				2EE85BBB1B3ADB29004C65F4 /* WhatIDontLike.playground */,
-				2E82EC581B395A61009CD5C0 /* Swift2.playground */,
 				2E82EC591B395A61009CD5C0 /* ValueTypePlayground.playground */,
 				2E82EC411B38686A009CD5C0 /* Swift2 */,
 				2E82EC5F1B3993E7009CD5C0 /* Swift2 Tests */,
