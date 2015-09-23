@@ -3,8 +3,9 @@
 import UIKit
 
 
+//* ---          Error Handling          ---*/
 
-// Swift 1
+// Error Handling with Swift 1.0 & 1.2
 
 //func stringByReplacingFoo(str: String) -> String? {
 //    var error: NSError? = nil
