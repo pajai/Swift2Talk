@@ -1,0 +1,109 @@
+
+
+/*
+Lets talk about error handling in Swift. With Swift 2 apple introduced a new concept for error handling.
+But before i'm showing you the new concept, I want to show you how error-handling was done in earlier swift releases.
+
+And after that we will take the same example and adapt it to the new error-handling concept. So you will see what effort it takes to adapt your maybe code to swift 2.
+
+Lets start with a function that checks a password for a minimum length.
+I'm gonna copy the function from the clipboard to save some time.
+
+The function named "validatePassword" takes two arguments. The first one is the password to want to check and the second one is an NSErrorPointer.
+
+So if the password has less then 5 characters, we create an new error and assing it to the errorpointers memory.
+An Error may consists of a domain-name, an error-code and also an error-description
+
+
+Now let's see how to call this function.
+For that we want to call the function "validePassword" from another function which is called "savePassword" and returns a Boolean if the password could be successfully saved or not.
+
+So let's the function "savePassword". Again i'm gonna copy the functions body from the clipboard to save some time.
+
+First we have to define an optional of type NSError
+Then we call the function "validatePassword" with the given password and the error-optional as inout-paramter (thats why it needs an ampersand).
+An inout-parameter allows, changes on variable to be reflect outside the function scope!
+
+After we called the function we can check if there was an error by checking if it's no nil.
+If there was an error we will print it out and return false. Otherwise we will return true.
+
+Now let's call the function "savePassword" with a too short password. You will see that the error is printed out to the console. If the password is long enough, the error would go away.
+
+
+
+That's how error handling worked before swift 2.
+
+-- SWIFT 2.0
+
+Now let's adapt the function "validatePassword" to the new error-handling concept of swift 2.
+For that we copy the function and remove the NSError-Pointer.
+
+With the new concept, you can now throw you own error-types, so lets define an TooLessCharacter Error.
+
+Now we are gonna add the 'throws' keyword after the argument-definition to indicate that the functions can throw an error.
+Of course we will 'throw' our error in the if block
+
+Let's call this method again in the savePassword-Function
+First we have to define a do- and catch-block.
+In the do-block we can now call the function "validatePassword" but because it throws a error we have to put "try" in front of it.
+In the catch block we can now print out the implicit injectec variable "error"
+
+Of course we can also check the specific error we defined, but we always have to add an additional catch which handles all other errors, or we have to delegate them to the next calling function.
+
+
+If you do not care about the error which is thrown, you can get rid of the do-catch clause and put an ampersand directly after the try-keyword!
+
+This would then automatically convert the return value into an optional. So if the optional returned is nil, you will know that there was an error. Otherwise you will have the functions return value assinged to the optional.
+
+
+So this is it about the new error-handling concept in swift 2.0
+It's cool that we no more need this c-style error handling, I showed you at the beginning, but there are still some drawbacks:
+- You cannot see from the function header, which type of error is thrown, you only know that there could be an error thrown!
+- PATRICK?
+
+
+
+-- GUARD - STATEMENT
+
+Let's talk about the guard-statement which was also introduced with swift 2.
+The guard-statement is similar to an if-statement, it also executes a block of code, based of an boolean value of an expression. But unlike the if-statement, the guard-statement only runs if the conditions is not met.
+
+So let's take the "savePassword" function from the previous example to explain it in more detail.
+
+The problem here is, we are checking a value we do not want rather then check for a value we want.
+
+We can remove this flaw, by rewriting this. Now we are checking the values we really want to occur. But theres now another flaw. We are putting the desired code into the conditions-block, rather than afterwards. This might not be a problem here, but you can imagin that it gets confusing if you have a lot of nested blocks.
+
+
+Thats where the guard-statement comes in place. With the guard statement we can check for all conditions we do not want to met and after that our desired code is executed.
+
+This allows easy understanding of what conditions will make this function exit. And for a developer it's clear, if he sees a guard-statement, he knows that its about an early exit from the function.
+
+
+
+-- DEFER - STATEMENT
+
+
+The defer-statement is a bit like the finally-block in java. It let's you execute code at the end of a function-call.
+But in difference to java, the defer-statement is not bound to another statement, so you can place it everywhere in the function.
+
+Let's see how it is used.
+
+We have a class "DatabaseConnection" with the following functions.
+And now we have a "PersistanceService" which uses the "DatabaseConnection" to save the data.
+
+When calling save on the "PersitanceService", it would open the db-connection, write some data, do some cleanup and save close the connection.
+
+With the defer-statement we can write the close-Connection call directly after the open-Connection function call, so we have all corresponding services next to each other, instead of spreaded through the function.
+
+When we have a second defer-statement in the same function, the defer-blocks are executed in the inverse order they are defined.
+
+So when we call the save-function of the persistance service, you can see, that the cleanup execute before the close-connection.
+
+
+*/
+
+
+
+
+
