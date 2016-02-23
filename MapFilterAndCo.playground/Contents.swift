@@ -3,6 +3,9 @@
 import UIKit
 
 
+// Better syntax for map, filter & co
+
+
 func map<T>(array: Array<T>, f: (T -> T)) -> Array<T> {
     return array.map(f)
 }

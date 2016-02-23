@@ -11,7 +11,7 @@
 
 @interface ObjCWithGenerics : NSObject
 
-- (nonnull NSArray<NSString *> *)names;
+- (nonnull NSArray<NSString *>*)names;
 - (void)addViews:(nullable NSArray<UIView *> *)views;
 
 @end

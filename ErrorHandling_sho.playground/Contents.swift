@@ -20,7 +20,7 @@ func savePassword(password: String) -> Bool {
 }
 
 /* Solution */
-func savePasswordImplemented(password: String) -> Bool {
+func savePassword(password: String) -> Bool {
     
     var theError: NSError?
     validatePassword(password, error: &theError)

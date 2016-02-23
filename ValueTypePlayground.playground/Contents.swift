@@ -3,6 +3,9 @@
 import UIKit
 
 
+// ValueTypes
+
+
 // example of a value type: an Int
 
 func doSomething(var n: Int) {
