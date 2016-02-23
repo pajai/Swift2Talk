@@ -10,6 +10,7 @@ import UIKit
 
 func doSomething(var n: Int) {
     n++
+    print(n)
 }
 
 let n = 1
@@ -27,14 +28,14 @@ class Foo: CustomStringConvertible {
     init(nb: Int) {
         self.nb = nb
     }
-
+    
     var description: String {
         return "Foo{\(nb)}"
     }
 }
 
 func doSmthWithFoo(f: Foo) {
-    f.nb += 1
+    f.nb++
 }
 
 let f = Foo(nb: 10)

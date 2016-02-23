@@ -12,18 +12,18 @@ enum MyType {
     case Unknown
 }
 
-let a = MyType.Nb(5)
+let a: MyType = .Nb(5)
 
 
 
 
 // extension for 'if' statement
 
-if case MyType.Nb(let v) = a {
+if case .Nb(let v) = a {
     print(v)
 }
 
-if case let MyType.Nb(v) = a {
+if case let .Nb(v) = a {
     print(v)
 }
 
@@ -38,7 +38,7 @@ for myType in coll {
 }
 
 
-for case let MyType.Str(s) in coll {
+for case let .Str(s) in coll {
     print(s)
 }
 

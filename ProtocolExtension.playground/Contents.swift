@@ -97,6 +97,11 @@ let range = 1...3
 // won’t compile
 //[1,2,3].firstIsHigherThan(3...6)
 
+// won't work either
+// since array of int cannot be converted to array of double
+//let doubleArray = [1.0, 2.0, 3.0]
+//doubleArray.firstIsHigherThan(intArray)
+
 
 // Rem: the keyword extension is used for a class or struct category or protocol extension
 //      in our case here for a protocol extension
