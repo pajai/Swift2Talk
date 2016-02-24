@@ -79,3 +79,8 @@ p1
 // In Swift: Array, Dictionary, Set are value types
 
 
+class Bar {}
+unsafeAddressOf(Bar())
+
+
+// Performance-wise: value types are faster than ref types
