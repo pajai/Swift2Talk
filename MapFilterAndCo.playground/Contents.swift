@@ -21,18 +21,18 @@ func map<T>(set: Set<T>, f: (T -> T)) -> Set<T> {
 let a: [Int] = [1,2,3]
 
 // here we use map as method of Array
-let b = a.map{ $0 + 1 }
+let b = a.map{ i in i + 1 }
 
 // here we call the globally defined map function
-map([1,2,3]) { $0 + 1 }
+map([1,2,3]) { i in i + 1 }
 
 let set = Set([1,2,3])
 
 // does not work, there is no map method on Set
-//set.map{ $0 + 1 }
+//set.map{ i in i + 1 }
 
 // the global map function works on a Set
-map(set) { $0 + 1 }
+map(set) { i in i + 1 }
 
 // syntax is not consistent accross collections
 // some had 'map', 'filter', etc. methods,
@@ -49,14 +49,14 @@ map(set) { $0 + 1 }
 // apply automatically to all sub classes
 
 let a2: [Int] = [1,2,3]
-let b2 = a2.map{ $0 + 1 }
+let b2 = a2.map { i in i + 1 }
 
 let set2 = Set([1,2,3])
-let anotherSet = set2.map{ $0 + 1 }
+let anotherSet = set2.map { i in i + 1 }
 
 let sum = (1...100)
-    .filter { $0 % 2 != 0 }
-    .map    { $0 * 2 }
+    .filter { i in i % 2 != 0 }
+    .map    { i in i * 2 }
     .reduce(0) { $0 + $1 }
 
 print(sum)

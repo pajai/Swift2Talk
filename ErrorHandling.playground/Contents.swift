@@ -7,12 +7,12 @@ import UIKit
 
 // Error Handling with Swift 1.0 & 1.2
 
-//var error: NSError? = nil
-//let regex = NSRegularExpression(pattern: "(foo)+", options: NSRegularExpressionOptions.CaseInsensitive, error:&error)
-//
-//if (error != nil) {
-//    print("an error occured during string replacement: \(error!)")
-//}
+var error: NSError? = nil
+let regex = NSRegularExpression(pattern: "(foo)+", options: NSRegularExpressionOptions.CaseInsensitive, error:&error)
+
+if (error != nil) {
+    print("an error occured during string replacement: \(error!)")
+}
 
 
 
@@ -20,9 +20,6 @@ import UIKit
 
 // Constructor has no inout error param
 // but need a try
-
-let a = try NSRegularExpression(pattern: "(foo)+", options: .CaseInsensitive)
-
 
 // with a try! a has still a non-optional type
 // if an error happen, we get a crash

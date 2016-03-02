@@ -77,7 +77,7 @@ let strings = ["hello", "world"]
 
 extension CollectionType where Generator.Element: Comparable {
     
-    func firstIsHigherThan(other: Self) -> Bool {
+    func firstHigher(other: Self) -> Bool {
         let thisFirst  = self.first
         let otherFirst = other.first
         return thisFirst > otherFirst
@@ -88,19 +88,19 @@ extension CollectionType where Generator.Element: Comparable {
 let intArray = [1,2,3]
 let range = 1...3
 
-[1,2,3].firstIsHigherThan([3,2,1])
-[3,2,1].firstIsHigherThan([1,2,3])
+[1,2,3].firstHigher([3,2,1])
+[3,2,1].firstHigher([1,2,3])
 
-(1...3).firstIsHigherThan(3...6)
-(3...6).firstIsHigherThan(1...3)
+(1...3).firstHigher(3...6)
+(3...6).firstHigher(1...3)
 
 // won’t compile
-//[1,2,3].firstIsHigherThan(3...6)
+//[1,2,3].firstHigher(3...6)
 
 // won't work either
 // since array of int cannot be converted to array of double
 //let doubleArray = [1.0, 2.0, 3.0]
-//doubleArray.firstIsHigherThan(intArray)
+//doubleArray.firstHigher(intArray)
 
 
 // Rem: the keyword extension is used for a class or struct category or protocol extension

@@ -80,14 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4393628A1C7CE59500805853 /* Draft.playground */,
-				43F2F2F11BAC3A96004187D8 /* ErrorHandling.playground */,
-				43F2F2F51BAC6D10004187D8 /* PatternMatching.playground */,
-				43F2F2F41BAC59C1004187D8 /* MapFilterAndCo.playground */,
-				43F2F2F31BAC4DD7004187D8 /* ProtocolExtension.playground */,
-				43F2F2F21BAC4913004187D8 /* EarlyExitWithGuard.playground */,
-				2E53BF601B3B001F0011F8F3 /* Algebraic_Datatype.playground */,
-				2EE85BBB1B3ADB29004C65F4 /* WhatIDontLike.playground */,
-				2E82EC591B395A61009CD5C0 /* ValueTypePlayground.playground */,
+				435A358B1C8726A4009E4EFC /* Playgrounds */,
 				2E82EC411B38686A009CD5C0 /* Swift2 */,
 				2E82EC5F1B3993E7009CD5C0 /* Swift2 Tests */,
 				2E82EC401B38686A009CD5C0 /* Products */,
@@ -131,6 +124,21 @@
 				2E82EC681B399493009CD5C0 /* Swift2 Tests-Bridging-Header.h */,
 			);
 			path = "Swift2 Tests";
+			sourceTree = "<group>";
+		};
+		435A358B1C8726A4009E4EFC /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF601B3B001F0011F8F3 /* Algebraic_Datatype.playground */,
+				43F2F2F41BAC59C1004187D8 /* MapFilterAndCo.playground */,
+				43F2F2F31BAC4DD7004187D8 /* ProtocolExtension.playground */,
+				43F2F2F11BAC3A96004187D8 /* ErrorHandling.playground */,
+				2E82EC591B395A61009CD5C0 /* ValueTypePlayground.playground */,
+				43F2F2F21BAC4913004187D8 /* EarlyExitWithGuard.playground */,
+				43F2F2F51BAC6D10004187D8 /* PatternMatching.playground */,
+				2EE85BBB1B3ADB29004C65F4 /* WhatIDontLike.playground */,
+			);
+			name = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
