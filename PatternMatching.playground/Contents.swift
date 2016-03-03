@@ -16,7 +16,6 @@ let a: MyType = .Nb(5)
 
 
 
-
 // extension for 'if' statement
 
 if case .Nb(let v) = a {

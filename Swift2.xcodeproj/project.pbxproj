@@ -50,6 +50,8 @@
 		2E82EC6B1B39A133009CD5C0 /* ObjCWithGenerics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCWithGenerics.h; sourceTree = "<group>"; };
 		2E82EC6C1B39A133009CD5C0 /* ObjCWithGenerics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCWithGenerics.m; sourceTree = "<group>"; };
 		2EE85BBB1B3ADB29004C65F4 /* WhatIDontLike.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WhatIDontLike.playground; sourceTree = "<group>"; };
+		435A358C1C872BE5009E4EFC /* Overview.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Overview.playground; sourceTree = "<group>"; };
+		435A358D1C884AFB009E4EFC /* KotlinVsSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = KotlinVsSwift.playground; sourceTree = "<group>"; };
 		4393628A1C7CE59500805853 /* Draft.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Draft.playground; sourceTree = "<group>"; };
 		43F2F2F11BAC3A96004187D8 /* ErrorHandling.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorHandling.playground; sourceTree = "<group>"; };
 		43F2F2F21BAC4913004187D8 /* EarlyExitWithGuard.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EarlyExitWithGuard.playground; sourceTree = "<group>"; };
@@ -129,6 +131,8 @@
 		435A358B1C8726A4009E4EFC /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				435A358C1C872BE5009E4EFC /* Overview.playground */,
+				435A358D1C884AFB009E4EFC /* KotlinVsSwift.playground */,
 				2E53BF601B3B001F0011F8F3 /* Algebraic_Datatype.playground */,
 				43F2F2F41BAC59C1004187D8 /* MapFilterAndCo.playground */,
 				43F2F2F31BAC4DD7004187D8 /* ProtocolExtension.playground */,
